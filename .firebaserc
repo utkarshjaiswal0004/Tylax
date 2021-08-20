@@ -1,7 +1,5 @@
 {
   "projects": {
-    "prod": "clientstesttylax",
-    "dev": "clientstesttylax",
     "default": "clientstesttylax"
   }
 }

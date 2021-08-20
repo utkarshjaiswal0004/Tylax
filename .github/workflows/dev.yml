@@ -25,6 +25,6 @@ jobs:
     # Runs a single command using the runners shell
     - name: Firebase Deploy
       run: |
-        sudo npm install -g firebase-tools
+        npm install -g firebase-tools
         firebase use dev --token $1//0g3DXps58-8V8CgYIARAAGBASNwF-L9IrD5wNfL31thwvE58BxG6hKzWNaQD-eYxwan0Pc-1p-QrRz313LCdBvSS-4V42RXSeQhw
         firebase deploy --token $1//0g3DXps58-8V8CgYIARAAGBASNwF-L9IrD5wNfL31thwvE58BxG6hKzWNaQD-eYxwan0Pc-1p-QrRz313LCdBvSS-4V42RXSeQhw

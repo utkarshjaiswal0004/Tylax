@@ -5,13 +5,13 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: 'AIzaSyAf0E-wnJhZR6K2DcIgzZw-D5oYfANLxgE',
-    authDomain: 'tylax-174b5.firebaseapp.com',
-    projectId: 'tylax-174b5',
-    storageBucket: 'tylax-174b5.appspot.com',
-    messagingSenderId: '884998688094',
-    appId: '1:884998688094:web:2013f9bff8fc01aec3d3cf',
-    measurementId: 'G-938HESVF0R'
+     apiKey: 'AIzaSyAaCdym11vcG9MZrtd5qgu5Leh8uAIV51Q',
+  authDomain: 'clientstesttylax-88bea.firebaseapp.com',
+  projectId: 'clientstesttylax-88bea',
+  storageBucket: 'clientstesttylax-88bea.appspot.com',
+  messagingSenderId: '13603204132',
+  appId: '1:13603204132:web:450ea8e764da52519a3cb1',
+  measurementId: 'G-9BCTZHY0KK'
   }
 };
 

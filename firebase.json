@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/Tylax",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

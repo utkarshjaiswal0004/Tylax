@@ -1,0 +1,25 @@
+section.footer {
+    background: linear-gradient(90.3deg, #3D54F5 9.97%, #0491FD 94.8%);
+    li {
+        a {
+            color: rgb(216, 216, 216);
+            font-weight: 500;
+            transition: 400ms;
+            line-height: 30px;
+        }
+    }
+    li:hover {
+        a:hover {
+            color: rgb(255, 255, 255);
+            font-size: large;
+            line-height: 40px;
+        }
+    }
+    div.social-media img {
+        height: 20px;
+        transition: 300ms;
+    }
+    div.social-media img:hover {
+        height: 30px;
+    }
+}

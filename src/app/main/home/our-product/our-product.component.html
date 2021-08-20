@@ -1,0 +1,88 @@
+<section style="height: auto;">
+    <div class="container h-100">
+        <div class="row h-30 mb-2">
+            <div class="col-lg-6 my-auto text-lg-left order-2 order-lg-1 text-center">
+                <h2 class="my-lg-2 mt-3 mb-1">Our Products</h2>
+                <p class="my-5 my-md-1">
+                    We at Tylax provide you with modern one-stop solution for all the construction related requirements! <br> We have highly specialized team in producing Exterior &amp; Interior finishes, Adhesive, Grout, Sealers, and Plasters, Water
+                    Proofing, Wall Putty and other building products for commercial and residential applications.
+                </p>
+            </div>
+            <div class="col-lg-6 my-auto order-1 text-center d-lg-block d-flex  order-lg-2 getBrocher p-5">
+                <div class="pt-2 downloadContainer container">
+                    <div class="row">
+                        <div class="col-md-4 col-12 mb-0 mb-sm-4 text-center logoTitle  mx-auto">
+                            <div class="image-stack mx-auto">
+                                <div class="image-stack__item image-stack__item--top">
+                                    <img src="../../../../assets/home/logo.svg" class="mb-2" alt="">
+                                </div>
+                                <div class="image-stack__item image-stack__item--bottom">
+                                    <img src="../../../../assets/logo/TYLAX.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-12 my-auto text-center download">
+                            <h4 class="text-white text-center mb-3">Get Your Own Brocher</h4>
+                            <img src="../../../../assets/icons/button.svg" class="downloadButton" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row my-1 h-60 slider">
+            <div id="scrollable" class="cards" (wheel)="onWheel($event)" style="overflow-y: hidden;">
+                <div class="cards-item text-center active">
+                    <img src="../../../../assets/sample/slide1.svg" alt="">
+                    <div class="text-center my-auto content-title">
+                        <p>Water-Proofing</p>
+                        <a>View Details</a>
+                    </div>
+                </div>
+                <div class="cards-item text-center">
+                    <img src="../../../../assets/sample/slide2.svg" alt="">
+                    <div class="text-center content-title">
+                        <p>Decoratives</p>
+                        <a>View Details</a>
+                    </div>
+                </div>
+                <div class="cards-item text-center">
+                    <img src="../../../../assets/sample/slide3.svg" alt="">
+                    <div class="text-center content-title">
+                        <p>Adhesive</p>
+                        <a>View Details</a>
+                    </div>
+                </div>
+                <div class="cards-item text-center">
+                    <img src="../../../../assets/sample/slide4.svg" alt="">
+                    <div class="text-center content-title">
+                        <p>Admixtures</p>
+                        <a>View Details</a>
+                    </div>
+                </div>
+                <div class="cards-item text-center">
+                    <img src="../../../../assets/sample/slide5.svg" alt="">
+                    <div class="text-center content-title">
+                        <p>Grout</p>
+                        <a>View Details</a>
+                    </div>
+                </div>
+                <div class="cards-item text-center">
+                    <img src="../../../../assets/sample/slide6.svg" alt="">
+                    <div class="text-center content-title">
+                        <p>Tile & Stone Care</p>
+                        <a>View Details</a>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="row  arrowLeftRight">
+                <img src="../../../../assets/icons/lefft.svg" class="left inActive" (click)="selectPrevious($event)" alt="">
+                <img src="../../../../assets/icons/right.svg" class="right" (click)="selectNext($event)" alt="">
+            </div>
+        </div>
+
+    </div>
+</section>

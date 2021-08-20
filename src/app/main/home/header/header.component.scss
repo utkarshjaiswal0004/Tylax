@@ -1,0 +1,113 @@
+section {
+    background: url(../../../../assets/home/header.jpg) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: 100% 100%;
+    div.playButton {
+        img {
+            width: 40px;
+            z-index: 0;
+            position: initial;
+        }
+        p {
+            margin: auto;
+            font-size: 0.9rem;
+            color: #3E3E3E;
+        }
+    }
+    div.exploreVenture button {
+        border: 1px solid #3F51F4;
+        background-color: rgba(0, 0, 0, 0);
+        border-radius: 43px;
+        color: #3F51F4;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 15px;
+        text-align: center;
+    }
+}
+
+.search-container {
+    float: left;
+    width: 70%;
+}
+
+input[type=text] {
+    border-radius: 40px;
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    width: 80%;
+    border-radius: 50px 0 0 50px;
+}
+
+.search-container button {
+    float: right;
+    position: absolute;
+    padding: 6px 2px 6px 2px;
+    margin-top: 8px;
+    // margin-right: 40px;
+    background: rgb(255, 255, 255);
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 50px 50px 0;
+    color: white;
+    font-weight: 680;
+}
+
+.search-container button span {
+    background: linear-gradient(92.06deg, #385AF6 -11.73%, #088DFC 106.44%);
+    box-shadow: 1px 0px 4px rgba(0, 0, 0, 0.25);
+    padding: 5px 20px 5px 20px;
+    border-radius: 50px 50px 50px 50px;
+}
+
+.search-container button:hover {
+    background: rgb(255, 255, 255);
+}
+
+@media (max-width: 450px) {
+    section {
+        background: url(../../../../assets/home/headerMobile.jpg) no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: 100% 100%;
+    }
+}
+
+// section {
+//     overflow: hidden;
+//     font-style: normal;
+//     // margin-top: -50px;
+//     background: url(../../../../assets/home/header.jpg) no-repeat;
+//     -webkit-background-size: cover;
+//     -moz-background-size: cover;
+//     -o-background-size: cover;
+//     background-size: 100% 100%;
+//     div.innerHeadrContent {
+//         padding-top: 50px;
+//         height: 100vh;
+//     }
+// }
+// @media screen and (max-width: 600px) {
+//     .search-container {
+//         float: none;
+//     }
+//     .topnav a,
+//     .topnav input[type=text],
+//     .topnav .search-container button {
+//         float: none;
+//         display: block;
+//         text-align: left;
+//         width: 100%;
+//         margin: 0;
+//         padding: 14px;
+//     }
+//     .topnav input[type=text] {
+//         border: 1px solid #ccc;
+//     }
+// }

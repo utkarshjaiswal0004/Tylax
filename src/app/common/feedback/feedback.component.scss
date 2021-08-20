@@ -1,0 +1,104 @@
+section {
+    div.topRow {
+        background: #FFFFFF;
+        box-shadow: 1px 1px 40px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+        width: 70%;
+        text-align: center;
+        margin: auto;
+        margin-top: 120px;
+        div.contactColumn {
+            background: linear-gradient(156.49deg, #385AF6 10.41%, #0193FD 88.58%);
+            border-radius: 4px;
+            table {
+                font-size: small;
+            }
+            p.address {
+                font-size: small;
+            }
+            p.message {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 25px;
+                display: flex;
+                align-items: flex-end;
+            }
+            span.mobileNumber {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 25px;
+                display: flex;
+                align-items: flex-end;
+            }
+        }
+        div.contactForm {
+            p.message {
+                font-family: Nunito Sans;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 170%;
+                display: flex;
+                align-items: center;
+                color: #707070;
+            }
+            input.name {
+                background: #F2F1F1;
+                border-radius: 3px;
+                border: #ceb1b1;
+                height: 150%;
+                width: 100%;
+            }
+            input.email {
+                background: #F2F1F1;
+                border-radius: 3px;
+                border: #F2F1F1;
+                width: 100%;
+                height: 150%;
+            }
+            input.number {
+                background: #F2F1F1;
+                border-radius: 3px;
+                border: #F2F1F1;
+                width: 100%;
+                height: 150%;
+            }
+            select.dropDown {
+                background: #F2F1F1;
+                border-radius: 3px;
+                border: #F2F1F1;
+                height: 150%;
+                width: 100%;
+            }
+            textarea.textMessage {
+                background: #F2F1F1;
+                border-radius: 3px;
+                border: #F2F1F1;
+                height: 150%;
+                min-width: 100%;
+            }
+            button.buttonSumbit {
+                background: linear-gradient(90deg, #3F3F3F 2.72%, #828282 91.87%);
+                box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+                border-radius: 10px;
+                color: white;
+                height: 2.5rem;
+                width: 10rem;
+            }
+            input.privacy {
+                background: #FFFFFF;
+                box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15), inset 0px 0px 1px 1px rgba(0, 0, 0, 0.25);
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        div.topRow {
+            width: 95%;
+        }
+    }
+}

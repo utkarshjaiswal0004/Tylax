@@ -1,0 +1,48 @@
+div.application-img img {
+    box-sizing: border-box;
+    box-shadow: -10px 1px 10px 1px rgba(0, 0, 0, 0.15);
+    transition: 0.8s;
+}
+
+.content-item {
+    background: #FFFFFF;
+    border: 1px solid rgba(192, 192, 192, 0.7);
+    box-sizing: border-box;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    transition: all 0.8s;
+    padding: 6px 32px 6px 14px;
+    img {
+        cursor: pointer;
+        transition: 0.8s;
+    }
+    .data {
+        display: none;
+        color: white;
+    }
+}
+
+.content-item.active {
+    color: white;
+    padding: 10px 25px;
+    background: linear-gradient(90deg, #3959F6 8.93%, #068EFC 93.06%);
+    box-shadow: inset 0px 1px 20px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    h4 {
+        color: white;
+    }
+    div.hideShow {
+        position: absolute;
+        margin: 0px !important;
+        padding: 0px 0px;
+    }
+    .data {
+        display: block;
+    }
+}
+
+div.hideShow {
+    position: absolute;
+    padding: 0px 10px;
+    transition: height 0.8s;
+}

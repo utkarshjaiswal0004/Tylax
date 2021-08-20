@@ -1,0 +1,36 @@
+div.imageArea {
+    img.bgImage {
+        height: 350px;
+        z-index: 1;
+    }
+    img.frontImage {
+        height: 300px;
+        z-index: 2;
+        position: absolute;
+        right: 40px;
+        top: 25px;
+    }
+}
+
+.image-stack {
+    display: grid;
+    position: relative; // imperative for the overlapping to work
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.image-stack__item--bottom {
+    grid-column: 1/-1;
+    grid-row: 1;
+}
+
+.image-stack__item--top {
+    grid-row: 1;
+    grid-column: 2/span 11;
+    padding-top: 7%;
+    z-index: 1;
+}
+
+img {
+    width: 100%;
+    display: block;
+}

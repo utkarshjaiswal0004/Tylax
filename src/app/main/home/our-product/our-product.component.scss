@@ -1,0 +1,234 @@
+.cards {
+    width: 95%;
+    display: flex;
+    overflow-x: scroll;
+}
+
+div.getBrocher {
+    div.downloadContainer {
+        background: linear-gradient(90deg, #3959F6 11.97%, #0490FD 100%);
+        box-shadow: inset 0px 1px 20px 1px rgba(0, 0, 0, 0.25);
+        border-radius: 6px;
+        div.logoTitle {
+            display: -webkit-inline-box;
+            img.title {
+                width: inherit;
+                margin-top: 8px;
+            }
+            img.title.mobileView {
+                width: auto;
+                margin-top: 8px;
+                margin-bottom: 25px;
+            }
+        }
+        div.download {
+            img.downloadButton {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+div.cards-item {
+    margin: 0 40px 0 0;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+    transition: 1000ms;
+    &:hover {
+        img {
+            -webkit-filter: grayscale(0);
+            filter: none;
+        }
+        div.content-title {
+            position: relative;
+            display: block;
+            p {
+                top: 20px;
+                position: relative;
+                display: none;
+                text-decoration: none;
+            }
+            a {
+                font-size: large;
+                font-weight: 500;
+                color: #068EFC;
+                text-decoration: underline;
+                display: contents;
+                text-decoration: none;
+            }
+        }
+    }
+    &.active {
+        img {
+            -webkit-filter: grayscale(0);
+            filter: none;
+        }
+    }
+    img {
+        height: 80%;
+        margin: auto;
+        filter: gray;
+        -webkit-filter: grayscale(1);
+        filter: grayscale(1);
+        transition: 800ms;
+    }
+    div.content-title {
+        margin: auto;
+        background-color: #ffffff;
+        position: relative;
+        padding-top: 8px;
+        bottom: 8px;
+        height: 40px;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        background: #FFFFFF;
+        box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.07);
+        border-radius: 4px;
+        transition: 800ms;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        p {
+            margin: auto;
+            font-weight: 500;
+            transition: 800ms;
+            display: contents;
+        }
+        a {
+            display: none;
+        }
+    }
+}
+
+div.cards-item:nth-child(even) {
+    top: 30px;
+}
+
+.inActive {
+    opacity: 0.4;
+    width: 42%;
+}
+
+div.slider {
+    div.cards .cards-item.active {
+        img {
+            -webkit-filter: grayscale(0);
+            filter: none;
+            transition: 1s;
+        }
+    }
+}
+
+div.arrowLeftRight {
+    z-index: 3;
+    margin: 0;
+    cursor: pointer;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+}
+
+// Non relevant styles
+// Relevant styles
+.image-stack {
+    display: grid;
+    position: relative; // imperative for the overlapping to work
+    grid-template-columns: repeat(12, 1fr);
+    .image-stack__item--bottom {
+        grid-column: 1/-1;
+        grid-row: 2;
+    }
+    .image-stack__item--top {
+        grid-row: 1;
+        grid-column: 1/span 12;
+        padding-top: 7%;
+        z-index: 1;
+    }
+    img {
+        width: 100%;
+        display: block;
+    }
+}
+
+@media (max-width: 500px) {
+    div.cards-item {
+        margin: 0px;
+        border-radius: 3px;
+        cursor: pointer;
+        position: relative;
+        transition: 1000ms;
+        img {
+            height: 60%;
+            margin: auto;
+            filter: gray;
+            -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+            transition: 800ms;
+        }
+        div.content-title {
+            margin: auto;
+            background-color: #ffffff;
+            position: relative;
+            padding-top: 8px;
+            bottom: 8px;
+            height: 40px;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            -webkit-box-shadow: 0px 3px 13px 1px rgba(0, 0, 0, 0.47);
+            -moz-box-shadow: 0px 3px 13px 1px rgba(0, 0, 0, 0.47);
+            box-shadow: 0px 3px 13px 1px rgba(0, 0, 0, 0.47);
+            border-radius: 4px;
+            transition: 800ms;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            p {
+                margin: auto;
+                font-weight: 500;
+                transition: 800ms;
+                display: contents;
+            }
+            a {
+                display: none;
+            }
+        }
+    }
+    div.cards-item:nth-child(even) {
+        top: 30px;
+    }
+    div.cards-item:hover {
+        img {
+            -webkit-filter: grayscale(0);
+            filter: none;
+        }
+        div.content-title {
+            position: relative;
+            display: block;
+            p {
+                top: 20px;
+                position: relative;
+                display: none;
+            }
+            a {
+                font-size: large;
+                font-weight: 500;
+                color: #068EFC;
+                text-decoration: underline;
+                display: contents;
+            }
+        }
+    }
+    .image-stack__item--bottom {
+        margin-bottom: 30px;
+    }
+    div.arrowLeftRight {
+        margin: 0;
+        cursor: pointer;
+        padding: 0;
+        margin-top: -160px;
+    }
+}

@@ -1,6 +1,7 @@
 {
   "projects": {
     "prod": "clientstesttylax",
-    "dev": "clientstesttylax"
+    "dev": "clientstesttylax",
+    "default": "clientstesttylax"
   }
 }

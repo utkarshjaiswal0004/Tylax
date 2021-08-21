@@ -34,15 +34,17 @@ div.cards-item {
     border-radius: 3px;
     cursor: pointer;
     position: relative;
-    transition: 1000ms;
+    transition: 1000ms ease-in-out;
     &:hover {
         img {
             -webkit-filter: grayscale(0);
             filter: none;
+            transition: 1000ms ease-in-out;
         }
         div.content-title {
             position: relative;
             display: block;
+            transition: 1000ms ease-in-out;
             p {
                 top: 20px;
                 position: relative;
@@ -63,6 +65,7 @@ div.cards-item {
         img {
             -webkit-filter: grayscale(0);
             filter: none;
+            transition: 1000ms ease-in-out;
         }
     }
     img {
@@ -74,6 +77,7 @@ div.cards-item {
         transition: 800ms;
     }
     div.content-title {
+        transition: 1000ms ease-in-out;
         margin: auto;
         background-color: #ffffff;
         position: relative;

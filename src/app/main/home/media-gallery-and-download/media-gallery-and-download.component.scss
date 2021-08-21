@@ -21,6 +21,10 @@ div.item {
     }
 }
 
+div.item:hover {
+    cursor: pointer;
+}
+
 div.item.brochure {
     color: white;
     background: linear-gradient(92.11deg, #3E3E3E 0%, #828282 94.38%);

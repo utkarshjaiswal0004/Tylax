@@ -54,9 +54,9 @@ export class OurProductComponent implements OnInit {
     event.preventDefault();
     if (mouseWheel) {
     if (event.deltaY > 0) {
-      mouseWheel.scrollLeft += 200;
+      mouseWheel.scrollLeft += 500;
     } else {
-      mouseWheel.scrollLeft -= 200;
+      mouseWheel.scrollLeft -= 500;
     }
   }
   }

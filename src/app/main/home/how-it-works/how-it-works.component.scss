@@ -19,8 +19,8 @@ div.imageArea {
 }
 
 .image-stack__item--bottom {
-    grid-column: 1/-1;
-    grid-row: 1;
+    width: 108%;
+    position: absolute;
 }
 
 .image-stack__item--top {

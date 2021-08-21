@@ -31,8 +31,8 @@
         </div>
 
 
-        <div class="row my-1 h-60 slider">
-            <div id="scrollable" class="cards" (wheel)="onWheel($event)" style="overflow-y: hidden;">
+        <div class="row my-1 h-60 slider" style="scroll-behavior: smooth;">
+            <div id="scrollable" class="cards" (wheel)="onWheel($event)" style="overflow-y: hidden;scroll-behavior: smooth;">
                 <div class="cards-item text-center active">
                     <img src="../../../../assets/sample/slide1.svg" alt="">
                     <div class="text-center my-auto content-title">

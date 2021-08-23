@@ -20,10 +20,15 @@
                     <div class="content  pb-3">
                         <h3 class="my-4 pb-1">Media & Gallery</h3>
                         <div class="data-target">
-                            <div class="item active my-3 px-3 py-3">
-                                <h5>Contractors Meet</h5> <span class="arrow text-right"><b>&#8669;</b></span>
+                            <!-- <li class="list-group-item" *ngFor="let item of galleryList">
+                                <input type="radio" class="radio" [(ngModel)]="selected" name="list_name" value="{{item.value}}" (change)="onItemChange(item)" />
+                            </li> -->
+                            <div class="item active my-3 px-3 py-3" *ngFor="let item of galleryList">
+                                <input type="radio" class="radio" [(ngModel)]="selected" name="list_name" value="{{item.value}}" (change)="onItemChange(item)" />
+                                <h5>{{item.title}}</h5> <span class="arrow text-right"><b>&#8669;</b></span>
+                                <!-- </input> -->
                             </div>
-                            <div class="item my-3 px-3 py-3">
+                            <!-- <div class="item my-3 px-3 py-3">
                                 <h5>Awards & Recognition
                                 </h5>
                                 <span class="arrow text-right"><b>&#8669;</b></span> </div>
@@ -33,7 +38,7 @@
                                 <span class="arrow text-right"><b>&#8669;</b></span> </div>
                             <div class="item my-3 px-3 py-3">
                                 <h5>Exhibitions</h5> <span class="arrow text-right"><b>&#8669;</b></span>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -67,7 +72,11 @@
                         </div>
                     </div>
                 </div>
-                <img src="../../../../assets/home/sample_banner_1.svg" alt="">
+                <div class="row" id="banner_area">
+                    <div class="col-12 h-100 banner_image">
+                        <!-- <img src="../../../../assets/home/sample_banner_1.svg" alt=""> -->
+                    </div>
+                </div>
             </div>
         </div>
 

@@ -14,7 +14,7 @@ import { ApplicationComponent } from './main/home/application/application.compon
 import { MediaGalleryAndDownloadComponent } from './main/home/media-gallery-and-download/media-gallery-and-download.component';
 import { HowItWorksComponent } from './main/home/how-it-works/how-it-works.component';
 import { HomeComponent } from './main/home/home.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,7 +33,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [WindowService],
   bootstrap: [AppComponent]

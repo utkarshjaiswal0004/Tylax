@@ -23,22 +23,12 @@
                             <!-- <li class="list-group-item" *ngFor="let item of galleryList">
                                 <input type="radio" class="radio" [(ngModel)]="selected" name="list_name" value="{{item.value}}" (change)="onItemChange(item)" />
                             </li> -->
-                            <div class="item active my-3 px-3 py-3" *ngFor="let item of galleryList">
-                                <input type="radio" class="radio" [(ngModel)]="selected" name="list_name" value="{{item.value}}" (change)="onItemChange(item)" />
-                                <h5>{{item.title}}</h5> <span class="arrow text-right"><b>&#8669;</b></span>
-                                <!-- </input> -->
+                            <div *ngFor="let item of galleryList">
+                                <div class="item active my-3 px-3 py-3" (click)="onItemChange(item.id)" id="item_id_{{item.id}}">
+                                    <h5>{{item.title}}</h5>
+                                    <span class="arrow text-right"><b> &#8669; </b></span>
+                                </div>
                             </div>
-                            <!-- <div class="item my-3 px-3 py-3">
-                                <h5>Awards & Recognition
-                                </h5>
-                                <span class="arrow text-right"><b>&#8669;</b></span> </div>
-                            <div class="item my-3 px-3 py-3">
-                                <h5>Projects Done
-                                </h5>
-                                <span class="arrow text-right"><b>&#8669;</b></span> </div>
-                            <div class="item my-3 px-3 py-3">
-                                <h5>Exhibitions</h5> <span class="arrow text-right"><b>&#8669;</b></span>
-                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -66,9 +56,7 @@
                 <div class="h-80">
                     <div class="cards">
                         <div class="cards-item text-center">
-                            <img class="active" (mouseover)="hoverImg($event)" src="../../../../assets/sample/mediaGallery1.jpg" alt="">
-                            <img (mouseover)="hoverImg($event)" src="../../../../assets/sample/mediaGallery1.jpg" alt="">
-                            <img (mouseover)="hoverImg($event)" src="../../../../assets/sample/mediaGallery1.jpg" alt="">
+                            <img *ngFor="let item of this.selectedItem.images" (click)="a($event)" id="image_id_{{item.id}}" (mouseover)="hoverSelectActiveImg('image_id_' + item.id)" src="{{ item.img_url}}" alt="{{item.img_discription}}">
                         </div>
                     </div>
                 </div>
@@ -82,3 +70,33 @@
 
     </div>
 </section>
+
+
+
+
+
+<!--
+                              <div class="item active my-3 px-3 py-3" *ngFor="let item of galleryList"
+                                formControlName="list_name">
+                                <div type="radio" class="radio" [(ngModel)]="selected" name="list_name"
+                                  (change)="onItemChange(item)">
+                                  <h5>{{item.title}}</h5> <span class="arrow text-right"><b>&#8669;</b></span>
+                                </div>
+                              </div>
+                             -->
+<!-- <select [(ngModel)]="selected" (ngModelChange)="onItemChange(item)" class="annka-center"
+                              name="curencies">
+                              <option *ngFor="let money of currencies; let i = index" (ngValue)="money"
+                                (click)="showPurchase(money)"> {{money.Currency}} </option>
+                            </select> -->
+<!-- <div class="item my-3 px-3 py-3">
+                                <h5>Awards & Recognition
+                                </h5>
+                                <span class="arrow text-right"><b>&#8669;</b></span> </div>
+                            <div class="item my-3 px-3 py-3">
+                                <h5>Projects Done
+                                </h5>
+                                <span class="arrow text-right"><b>&#8669;</b></span> </div>
+                            <div class="item my-3 px-3 py-3">
+                                <h5>Exhibitions</h5> <span class="arrow text-right"><b>&#8669;</b></span>
+                            </div> -->

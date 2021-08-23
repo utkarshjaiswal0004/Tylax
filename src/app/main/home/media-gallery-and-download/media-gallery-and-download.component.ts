@@ -1,76 +1,89 @@
 import { Component, OnInit } from '@angular/core';
+import { concat } from 'rxjs';
 
 export const Gallery: any = [
   {
+    id: 'item_1',
     title: 'Contractors Meet',
-    value: 'item_1',
     message: 'Construction Chemicals plays a important role, it helps in increasing the productivity but also contribute in green building solutions, which are safe for environment. Construction chemical industry is a emerging enterprises in India. By maintaining the global standard and keep latest innovations in technology to challenge traditional methods in construction',
     images: [
       {
-      img_url: '../../../../assets/sample/1.png',
-      img_discription: 'Tylax Image Gallery'
+        id: 'image_1',
+        img_url: '../../../../assets/sample/mediaGallery1.jpg',
+        img_discription: 'Tylax Image Gallery'
       },
       {
-        img_url: '../../../../assets/sample/1.png',
-        img_discription: 'Tylax Our Mission Image'
+        id: 'image_2',
+        img_url: '../../../../assets/sample/mediaGallery1.jpg',
+        img_discription: 'Tylax Image Gallery'
       },
       {
-        img_url: '../../../../assets/sample/1.png',
-        img_discription: 'Tylax Our Mission Image'
+        id: 'image_3',
+        img_url: '../../../../assets/sample/mediaGallery1.jpg',
+        img_discription: 'Tylax Image Gallery'
       }]
   },
   {
+    id: 'item_2',
     title: 'Awards & Recognition',
-    value: 'item_2',
     message: 'Construction Chemicals plays a important role, it helps in increasing the productivity but also contribute in green building solutions, which are safe for environment. Construction chemical industry is a emerging enterprises in India. By maintaining the global standard and keep latest innovations in technology to challenge traditional methods in construction',
     images: [
       {
-        img_url: '../../../../assets/sample/1.png',
+        id: 'image_1',
+        img_url: '../../../../assets/sample/mediaGallery1.jpg',
         img_discription: 'Tylax Image Gallery'
       },
       {
-        img_url: '../../../../assets/sample/1.png',
-        img_discription: 'Tylax Our Mission Image'
+        id: 'image_2',
+        img_url: '../../../../assets/sample/mediaGallery1.jpg',
+        img_discription: 'Tylax Image Gallery'
       },
       {
-        img_url: '../../../../assets/sample/1.png',
-        img_discription: 'Tylax Our Mission Image'
+        id: 'image_3',
+        img_url: '../../../../assets/sample/mediaGallery1.jpg',
+        img_discription: 'Tylax Image Gallery'
       }]
   },
   {
+    id: 'item_3',
     title: 'Projects Done',
-    value: 'item_3',
     message: 'Construction Chemicals plays a important role, it helps in increasing the productivity but also contribute in green building solutions, which are safe for environment. Construction chemical industry is a emerging enterprises in India. By maintaining the global standard and keep latest innovations in technology to challenge traditional methods in construction',
     images: [
       {
-        img_url: '../../../../assets/sample/1.png',
+        id: 'image_1',
+        img_url: '../../../../assets/sample/mediaGallery1.jpg',
         img_discription: 'Tylax Image Gallery'
       },
       {
-        img_url: '../../../../assets/sample/1.png',
-        img_discription: 'Tylax Our Mission Image'
+        id: 'image_2',
+        img_url: '../../../../assets/sample/mediaGallery1.jpg',
+        img_discription: 'Tylax Image Gallery'
       },
       {
-        img_url: '../../../../assets/sample/1.png',
-        img_discription: 'Tylax Our Mission Image'
+        id: 'image_3',
+        img_url: '../../../../assets/sample/mediaGallery1.jpg',
+        img_discription: 'Tylax Image Gallery'
       }]
   },
   {
+    id: 'item_4',
     title: 'Exhibitions',
-    value: 'item_4',
     message: 'Construction Chemicals plays a important role, it helps in increasing the productivity but also contribute in green building solutions, which are safe for environment. Construction chemical industry is a emerging enterprises in India. By maintaining the global standard and keep latest innovations in technology to challenge traditional methods in construction',
     images: [
       {
-        img_url: '../../../../assets/sample/1.png',
+        id: 'image_1',
+        img_url: '../../../../assets/sample/mediaGallery1.jpg',
         img_discription: 'Tylax Image Gallery'
       },
       {
-        img_url: '../../../../assets/sample/1.png',
-        img_discription: 'Tylax Our Mission Image'
+        id: 'image_2',
+        img_url: '../../../../assets/sample/mediaGallery1.jpg',
+        img_discription: 'Tylax Image Gallery'
       },
       {
-        img_url: '../../../../assets/sample/1.png',
-        img_discription: 'Tylax Our Mission Image'
+        id: 'image_3',
+        img_url: '../../../../assets/sample/mediaGallery1.jpg',
+        img_discription: 'Tylax Image Gallery'
       }]
   },
 ];
@@ -84,35 +97,41 @@ export const Gallery: any = [
 export class MediaGalleryAndDownloadComponent implements OnInit {
 
 
-  selectItem: any;
-  selected?: string;
+  selectedItem: any;
   selectedString?: string;
   galleryList: any = Gallery;
 
   constructor() {
     this.galleryList = Gallery;
-    this.selected = 'item_1';
-    this.getSelecteditem();
+    this.getSelecteditem('item_1');
   }
 
   ngOnInit(): void {
   }
 
-  getSelecteditem(): any {
-    this.selectItem = Gallery.find((Item: any) => Item.value === this.selected);
-    this.selectedString = JSON.stringify(this.selectItem);
-    console.log(this.selectItem);
+  getSelecteditem(item: any): void {
+    this.selectedItem = Gallery.find((Item: any) => Item.id === item);
+    this.selectedString = JSON.stringify(this.selectedItem);
+    console.log(this.selectedItem);
     console.log(this.selectedString);
-
   }
+
+  setActiveClass(selectedItemId?: Event, selectedImageId?: Event): void{}
 
   onItemChange(item: any): any {
-    this.getSelecteditem();
+    this.getSelecteditem(item);
   }
 
-  hoverImg(event: any): any{
+  hoverSelectActiveImg(selectedImageId: any): any{
+    const id: string = '#' + selectedImageId;
+    console.log(id);
     document.querySelector('.cards .cards-item img.active')?.classList.remove('active');
-    event.path[0]?.classList.add('active');
+    document.getElementById(id)?.classList.add('active');
+    // event.path[0]?.classList.add('active');
   }
 
+
+  a(e: Event): any{
+    console.log(e);
+  }
 }

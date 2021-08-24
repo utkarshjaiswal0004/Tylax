@@ -20,19 +20,11 @@
                     <div class="content  pb-3">
                         <h3 class="my-4 pb-1">Media & Gallery</h3>
                         <div class="data-target">
-                            <div class="item active my-3 px-3 py-3">
-                                <h5>Contractors Meet</h5> <span class="arrow text-right"><b>&#8669;</b></span>
-                            </div>
-                            <div class="item my-3 px-3 py-3">
-                                <h5>Awards & Recognition
-                                </h5>
-                                <span class="arrow text-right"><b>&#8669;</b></span> </div>
-                            <div class="item my-3 px-3 py-3">
-                                <h5>Projects Done
-                                </h5>
-                                <span class="arrow text-right"><b>&#8669;</b></span> </div>
-                            <div class="item my-3 px-3 py-3">
-                                <h5>Exhibitions</h5> <span class="arrow text-right"><b>&#8669;</b></span>
+                            <div class="item-list" *ngFor="let item of galleryList">
+                                <div class="item my-3 px-3 py-3" id="item_id_{{item.id}}" (click)="clickSelectActiveItem('item_id_', item.id)">
+                                    <h5>{{item.title}}</h5>
+                                    <span class="arrow text-right"><b> &#8669; </b></span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -54,20 +46,22 @@
                 </div>
             </div>
             <div class="col-md-9">
-                <div class="h-20 text-center text-md-left">
-                    <p>We are lorem ipsum dolor sit amet, consectetur adipiscing elit. Convallis rhoncus ipsum nunc consectetur lorem a eu amet ac. Bibendum est molestie dui arcu mi at cras malesuada nunc.We are lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit. Convallis rhoncus ipsum nunc </p>
-                </div>
-                <div class="h-80">
-                    <div class="cards">
-                        <div class="cards-item text-center">
-                            <img class="active" (mouseover)="hoverImg($event)" src="../../../../assets/sample/mediaGallery1.jpg" alt="">
-                            <img (mouseover)="hoverImg($event)" src="../../../../assets/sample/mediaGallery1.jpg" alt="">
-                            <img (mouseover)="hoverImg($event)" src="../../../../assets/sample/mediaGallery1.jpg" alt="">
+                <div class="data">
+                    <div class="h-20 text-center text-md-left">
+                        <p>{{selectedItem.message}} </p>
+                    </div>
+                    <div class="h-80">
+                        <div class="cards">
+                            <div class="cards-item text-center">
+                                <img *ngFor="let item of this.selectedItem.images" id="image_id_{{item.id}}" (mouseover)="hoverSelectActiveImg('image_id_' + item.id)" src="{{ item.img_url}}" alt="{{item.img_discription}}">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <img src="../../../../assets/home/sample_banner.svg" alt="">
+                <div class="row" id="banner_area">
+                    <div class="col-12 h-100 banner_image">
+                    </div>
+                </div>
             </div>
         </div>
 

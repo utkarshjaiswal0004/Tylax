@@ -1,36 +1,9 @@
-div.imageArea {
-    img.bgImage {
-        height: 350px;
-        z-index: 1;
+@media (max-width: 600px) {
+    div.thumbnail-section {
+        display: inline-flex;
+        img.thumbnail-video {
+            max-width: 280px;
+            height: auto !important;
+        }
     }
-    img.frontImage {
-        height: 300px;
-        z-index: 2;
-        position: absolute;
-        right: 40px;
-        top: 25px;
-    }
-}
-
-.image-stack {
-    display: grid;
-    position: relative; // imperative for the overlapping to work
-    grid-template-columns: repeat(12, 1fr);
-}
-
-.image-stack__item--bottom {
-    width: 108%;
-    position: absolute;
-}
-
-.image-stack__item--top {
-    grid-row: 1;
-    grid-column: 2/span 11;
-    padding-top: 7%;
-    z-index: 1;
-}
-
-img {
-    width: 100%;
-    display: block;
 }

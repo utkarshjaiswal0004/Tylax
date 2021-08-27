@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+import * as AOS from 'aos';
 @Component({
   selector: 'app-how-it-works',
   templateUrl: './how-it-works.component.html',
@@ -10,6 +11,7 @@ export class HowItWorksComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    AOS.init();
   }
 
 }

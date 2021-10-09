@@ -16,6 +16,7 @@ import { HowItWorksComponent } from './main/home/how-it-works/how-it-works.compo
 import { HomeComponent } from './main/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -83,3 +83,15 @@ code {
         cursor: pointer;
     }
 }
+
+.animate {
+    opacity: 0;
+    transform: translateY(-100%);
+    animation: 200ms ease-in;
+}
+
+.animate_after {
+    opacity: 1;
+    transform: translateY(0);
+    animation: 200ms ease-in;
+}

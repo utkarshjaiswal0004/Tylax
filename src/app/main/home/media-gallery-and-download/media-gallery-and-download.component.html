@@ -1,4 +1,4 @@
-<section class="my-5 py-3">
+<section class="my-5 py-3" id="media">
     <div class="container">
         <div class="row">
             <div class="col-lg-3 mb-5">
@@ -30,7 +30,7 @@
                     </div>
                 </div>
 
-                <div class="side-box mt-4 px-3 d-none d-md-block ">
+                <div class="side-box mt-4 px-3 d-none d-md-block " id="download">
                     <div class="content  pb-3">
                         <h3 class="my-3 pb-1">Download</h3>
                         <div class="data-target">
@@ -52,13 +52,13 @@
                     </div>
                     <div class="h-80">
                         <div class="cards">
-                            <div class="cards-item text-center">
+                            <div class="cards-item text-center" data-aos-easing="ease-in-back" data-aos-duration="800" data-aos-duration="800" data-aos="fade-left">
                                 <img *ngFor="let item of this.selectedItem.images" id="image_id_{{item.id}}" (mouseover)="hoverSelectActiveImg('image_id_' + item.id)" src="{{ item.img_url}}" alt="{{item.img_discription}}">
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row" id="banner_area">
+                <div class="row" id="banner_area" data-aos-easing="ease-in-back" data-aos-duration="800" data-aos-duration="800" data-aos="fade-up">
                     <div class="col-12 h-100 banner_image">
                     </div>
                 </div>
